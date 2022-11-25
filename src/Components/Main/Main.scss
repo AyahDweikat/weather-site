@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap');
+
+
+
+
+// @mixin theme($theme: DarkGray) {
+//     background: $theme;
+//   }
+$fontTitleColor: #fff;
+$fontDescColor: #394d86;
+$bgColor:#a6bcfa;
+// .weatherCard{
+//     @include theme(rgb(56, 54, 173));
+//     width: 100%;
+//     height: calc(100vh - 76px);
+// }
+
+.weatherCard{
+  width: 100%;
+  height: calc(100vh - 76px);
+  // background-color: $bgColor;
+  font-family: 'Open Sans', sans-serif;
+  .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    height: 100%;
+  }
+  .state{
+    .image{
+      width: 200px;
+      height: 200px;
+    }
+    .state-title{
+      color:#fff;
+      font-family: 'Raleway', sans-serif;
+      text-align: center;
+      font-weight: 600;
+      font-size: 20px;
+    }
+  }
+  .temp-title{
+    font-size: 18px;
+    font-weight: 600;
+    color: #04133d;
+    // font-family: 'Open Sans', sans-serif;
+    .temp-desc{
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+  .hum-pres{
+    font-size: 18px;
+    font-weight: 600;
+    color: #04133d;
+    // font-family: 'Open Sans', sans-serif;
+    .hum-pres-desc{
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+      font-weight: 400;
+      font-size: 16px;
+    }
+  }
+}
