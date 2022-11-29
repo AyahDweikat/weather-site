@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.scss";
 
 function Header({setData}) {
@@ -15,11 +15,11 @@ function Header({setData}) {
   }
   const getData = async (location) => {
     let _location = capitalize(location);
-    const resp = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${_location}&appid=7978bd37eb6b8463cc06ca35e9166f7a`
-    );
+    const resp = await axios.get(`http://api.openweathermap.org/data/2.5/forecast?q=${_location}&cnt=8&units=metric&appid=7978bd37eb6b8463cc06ca35e9166f7a`);
+    // console.log(resp);
     if (resp.status === 200) {
       let data = resp.data;
+      // console.log(resp.data);
       setWeatherData(data);
       if(typeof setData=="function"){
         setData(data);
