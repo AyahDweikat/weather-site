@@ -5,7 +5,6 @@ import "./Header.scss";
 function Header({setData}) {
   const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState({}); // store data from api
-
   function getLocation(e) {
     setLocation(e.target.value);
   }
