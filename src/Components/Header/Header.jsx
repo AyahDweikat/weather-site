@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import "./Header.scss";
-
 function Header({setData}) {
   const [location, setLocation] = useState("");
   const [weatherData, setWeatherData] = useState({}); // store data from api
